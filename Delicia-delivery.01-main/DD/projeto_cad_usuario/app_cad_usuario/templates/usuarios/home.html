@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicia Delivery</title>
+    <style>
+        
+        #textos{
+            color: #461F06;
+            font-size: 25px;
+            text-align: center;
+        }
+        body{
+            background-image: url(imagens/Tela\ de\ inicio\ \(2\).png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+        }
+        .box{
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background-color: #FF914D;
+            border: 100%;
+            border-radius: 50px;
+            font-size: 25px;
+            justify-content: center;
+        }
+        .inputUser2{
+            background-color: #ffc400;
+            border: 100%;
+            border-radius: 50px;
+            font-size: 25px;
+            justify-content: center;
+        }
+        .inputUser3{
+            background-color: #ffe477;
+            border: 100%;
+            border-radius: 50px;
+            font-size: 25px;
+            justify-content: center;
+        }
+        #submit{
+            background-color: #FFC928;
+            border: 100%;
+            border-radius: 50px;
+            font-size: 25px;
+            color: #461F06;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="{% url 'lista_usuarios' %}" method="POST">
+            {% csrf_token %}
+        <div class="inputBox">
+            <center><label for="nome" id="textos">Seu Nome:</label><br></center>
+            <input type="texte" name="nome" id="nome" class="inputUser" maxlength=30 required>
+        </div><br><br>
+    
+
+        <div class="inputBox">
+            <center><label for="numero" id="textos">Seu Número:</label><br></center>
+            <center><input type="texte" name="numero" id="numero" class="inputUser2" maxlength=13 ></center>
+        </div><br><br>
+
+        <div class="inputBox">
+            <center><label for="numero" id="textos">Sua Senha:</label><br></center>
+            <center><input type="texte" name="senha" id="senha" class="inputUser3" maxlength=99 required></center>
+        </div><br><br>
+
+        <center><input type="submit" nome="submit" id="submit"></center>
+        <center><h3 style="color: rgb(0, 81, 255);"> <a href="" style="text-decoration: none;">Apenas ver o Cardápio:</a></h3></center>
+        
+    </div>
+</form>
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+</html>
