@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicia Delivery</title>
+    {% load static %}
     <style>
         
         #textos{
@@ -13,7 +14,7 @@
             text-align: center;
         }
         body{
-            background-image: url(imagens/Tela\ de\ inicio\ \(2\).png);
+            background-image: url("{% static 'imagens/telaInicio.png' %}");
             background-repeat: no-repeat;
             background-size: 100%;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

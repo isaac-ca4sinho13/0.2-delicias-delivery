@@ -58,6 +58,7 @@ if __name__ == '__main__':
     #inserir_form(info2)
     lista = ['1']
     deletar_form(lista)
+
     #info3 = ["Isaac","99999999","000",'4']
     #atualizar_form(info3)
 
